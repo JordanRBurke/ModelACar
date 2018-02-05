@@ -1,4 +1,5 @@
 package com.company;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
 
@@ -11,6 +12,7 @@ public class Main {
 
 
         CarModel carModel = new CarModel();
+        CarModel carModel2 = new CarModel();
         CarModel carOptions = new CarModel();
         CarModel carOptions2 = new CarModel();
 
@@ -39,34 +41,66 @@ public class Main {
         carOptions2.setWeightCar(3723);
         carOptions2.setModel("Sports Classic");
 
+        try {
+            System.out.println("Would you like a custom car or a pre-made car?");
+            System.out.println("Please enter Pre-made or Custom for the car (It has to be spelled correctly)");
+            if (input.nextLine().equals("Custom")) {
+                System.out.println("You have choose a Custom Car!!");
+                System.out.println("Would you like a Orange or Blue car?");
+                if (input.nextLine().equals("Orange")) {
+                    System.out.println("You have choose ORANGE!!");
+                    System.out.println("What tires would you like Rock Crusher or White Spoke?");
+                } else if (input.nextLine().equals("Rock Crusher")) {
+                    System.out.println("You have choose Rock Crusher");
 
-        System.out.println("Would you like a custom car or a pre-made car?");
-        System.out.println("Please enter Pre-made or Custom for the car (It has to be spelled correctly)");
-        if (input.nextLine().equals("Custom")) {
-            System.out.println("You have choose a Custom Car!!");
-            System.out.println("Would you like a Orange or Blue car?");
-            if (input.nextLine().equals("Orange")) {
-                System.out.println("You have choose ORANGE!!");
+
+                } else if (input.nextLine().equals("Blue")) {
+                    System.out.println("You have choose BLUE!!");
+
+                }
                 System.out.println("What tires would you like Rock Crusher or White Spoke?");
-            } else if (input.nextLine().equals("Rock Crusher")) {
-                System.out.println("You have choose Rock Crusher");
+                if (input.nextLine().equals("Rock Crusher")) {
+                    System.out.println("You have choose Rock Crusher!!");
+                } else if (input.nextLine().equals("White Spoke")) {
+                    System.out.println("You have choose White Spoke!");
+                }
 
 
-            } else if (input.nextLine().equals("Blue")) {
-                System.out.println("You have choose BLUE!!");
-
+            } else if (input.nextLine().equals("Pre-made")) {
+                System.out.println("You have choose a Pre-made Car!!!");
+                System.out.println("You have the options of AVALON....");
+            } else {
+                System.out.println("Error answer not recognized!");
             }
-            System.out.println("What tires would you like Rock Crusher or White Spoke?");
-            if (input.nextLine().equals("Rock Crusher")) {
-                System.out.println("You have choose Rock Crusher!!");
+
+
+            if (input.nextLine().equals("AVALON")) {
+                System.out.println("You have chosen AVALON!!");
             }
+        } catch (InputMismatchException ime) {
+            System.out.println("The option you have selected is unidentified or spelled incorrectly");
+        }
 
 
-        } else if (input.nextLine().equals("Pre-made")) {
-            System.out.println("You have choose a Pre-made Car!!!");
-            System.out.println("You have the options of AVALON....");
-        } else {
-            System.out.println("Error answer not recognized!");
+
+//        switch (input.nextInt()) {
+//            case 1:
+            //Accelerate
+//                break;
+//            case 2:
+                //Decelerate
+//               break;
+//            case 3:
+                //Fill up with gas
+//                break;
+//            case 4:
+                //Exit
+//                System.exit(0);
+//                break;
+//            default:
+//                System.out.println("Pick a number between 1 and 4");
+
+//
         }
 
 
@@ -97,5 +131,23 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
-}
+
+
+
+
