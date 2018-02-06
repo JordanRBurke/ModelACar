@@ -13,7 +13,24 @@ public class CarModel {
     private String color;
     private String engine;
 
+    public CarModel() {
+    }
+
+    public CarModel(int year, String carName, String wheelType, int speedMPH, String model, int sizeCar, int milageCar, double weightCar, String color, String engine) {
+        this.year = year;
+        this.carName = carName;
+        this.wheelType = wheelType;
+        this.speedMPH = speedMPH;
+        this.model = model;
+        this.sizeCar = sizeCar;
+        this.milageCar = milageCar;
+        this.weightCar = weightCar;
+        this.color = color;
+        this.engine = engine;
+    }
+
     public String getEngine() {
+
         return engine;
     }
 
