@@ -18,10 +18,11 @@ public class MainMenu extends Avalon {
         if (input.nextLine().equals("Pre-made")) {
             System.out.println("You have selected a Pre-made ");
             System.out.println("You have the option of a Ferrari, Avalon, and McLaren (Selecting one will give you the stats)");
+
         } else {
             System.out.println("You have selected Custom");
             System.out.println("Choose a car Super or Off-road?");
-        } if (input.nextLine().equals("Super")) {
+        } if (input.nextLine().substring(0).equalsIgnoreCase("S")) {
                 setCarName("Super");
                 System.out.println("You have chosen Super");
                 System.out.println("What tires would you like White Spoke or Dust Riders");
@@ -30,7 +31,7 @@ public class MainMenu extends Avalon {
             setCarName("Off-road");
             System.out.println("What tires would you like White Spoke or Dust Riders");
             }
-            if (input.nextLine().equals("White Spoke")) {
+            if (input.nextLine().substring(0).equalsIgnoreCase("W")) {
             setWheelType("White Spoke");
             System.out.println("You have chosen White Spoke!");
             System.out.println("What color would you like to pick? Red or Black");
